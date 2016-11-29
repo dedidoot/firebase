@@ -3,7 +3,7 @@
 *
 * resep makanan dan minuman ada status sudah diverified maksudnya sudah dicoba dengan user yg sudah pernah mencoba resep tersebut
 *   => user yang memverified dapat lebih dari 1 user bahwa resep ini sudah pernah dicoba dengan pengalamannya maka user dapat memberikan
-*   => icon verified yang berarti berhasil dicoba
+*   => icon verified dan komentar mereka yang berarti berhasil dicoba
 *
 * setiap resep makanan dan minuman maksimal 10 gambar
 *
