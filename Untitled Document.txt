@@ -8,7 +8,7 @@
 * setiap resep makanan dan minuman maksimal 10 gambar
 *
 * dengan login user dapat memberikan komentar terhadap resep makanan dan minuman
-* tanpa login setiap pengguna dapat melihat resep makanan dan minuman maksimal 50 resep data
+* tanpa login setiap pengguna dapat melihat resep makanan dan minuman tanpa batas
 * dengan login user dapat melihat, menambahkan dan delete (resepnya si user sendiri) resep makanan dan minuman tanpa batas
 * dengan login user dapat memberikan bintang (bookmark) setiap resep makanan dan minuman
 * dengan login user dapat memberikan verified kepada resep makanan dan minuman
