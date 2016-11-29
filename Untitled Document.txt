@@ -5,7 +5,7 @@
 *   => user yang memverified dapat lebih dari 1 user bahwa resep ini sudah pernah dicoba dengan pengalamannya maka user dapat memberikan
 *   => icon verified dan komentar mereka yang berarti berhasil dicoba
 *
-* setiap resep makanan dan minuman maksimal 10 gambar
+* setiap resep makanan dan atau minuman maksimal 10 gambar
 *
 * dengan login user dapat memberikan komentar terhadap resep makanan dan minuman
 * tanpa login setiap pengguna dapat melihat resep makanan dan minuman tanpa batas
