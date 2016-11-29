@@ -10,7 +10,7 @@ public class User {
     public String name;
     public String email;
 
-    public User() {
+    public User() {// wajib deklarasi
     }
 
     public User(String name, String email) {

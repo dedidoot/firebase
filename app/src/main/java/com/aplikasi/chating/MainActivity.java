@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.aplikasi.chating.pojo.Dosen;
 import com.aplikasi.chating.pojo.User;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -18,6 +19,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -80,7 +82,36 @@ public class MainActivity extends AppCompatActivity {
 
         //toggleButton();
 
-        addUserChangeListener2();
+        getData();
+
+    }
+
+    public void btnDosen(View v) {
+        DatabaseReference dosenDatabse = mFirebaseInstance.getReference("dosen");
+
+        Dosen dosen = new Dosen(edName.getText().toString(), edEmail.getText().toString());
+
+        String id = dosenDatabse.push().getKey();
+        dosenDatabse.child(id).setValue(dosen);
+
+        dosenDatabse.child(id).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Dosen dosen = dataSnapshot.getValue(Dosen.class);
+
+                if (dosen == null || dosen.email == null || dosen.name == null) {
+                    Log.wtf("data dosen ", "null");
+                    return;
+                }
+
+                Log.wtf("name dosen: " + dosen.name, "email dosen: " + dosen.email);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
 
     }
 
@@ -107,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
         addUserChangeListener();
     }
 
-    private void addUserChangeListener2() {
+    private void getData() {
         final DatabaseReference user = mFirebaseInstance.getReference("users");
         /*  User us = dataSnapshot.getValue(User.class);
             Log.wtf("name", "=> " + us.name);
@@ -118,8 +149,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String prevChildKey) {
                 User us = dataSnapshot.getValue(User.class);
-               /* Log.wtf("namex", "=> " + us.name);
-                Log.wtf("emailx", "=> " + us.email);*/
+                Log.wtf("namex", "=> " + us.name);
+                Log.wtf("emailx", "=> " + us.email);
 
                 TextView textView = new TextView(MainActivity.this);
                 textView.setText(us.name);

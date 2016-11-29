@@ -1,0 +1,17 @@
+/*
+* Buat aplikasi resep makanan atau minuman
+*
+* resep makanan dan minuman ada status sudah diverified maksudnya sudah dicoba dengan user yg sudah pernah mencoba resep tersebut
+*   => user yang memverified dapat lebih dari 1 user bahwa resep ini sudah pernah dicoba dengan pengalamannya maka user dapat memberikan
+*   => icon verified yang berarti berhasil dicoba
+*
+* setiap resep makanan dan minuman maksimal 10 gambar
+*
+* dengan login user dapat memberikan komentar terhadap resep makanan dan minuman
+* tanpa login setiap pengguna dapat melihat resep makanan dan minuman maksimal 50 resep data
+* dengan login user dapat melihat, menambahkan dan delete (resepnya si user sendiri) resep makanan dan minuman tanpa batas
+* dengan login user dapat memberikan bintang (bookmark) setiap resep makanan dan minuman
+* dengan login user dapat memberikan verified kepada resep makanan dan minuman
+*
+* */
+

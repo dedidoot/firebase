@@ -60,18 +60,35 @@
         android:textColor="@android:color/white"
         android:textStyle="bold" />
 
+    <Button
+
+        android:id="@+id/btn_save2"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_save"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:onClick="btnDosen"
+        android:text="Save Dosen"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/btn_save">
+        android:layout_below="@+id/btn_save2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp">
 
         <LinearLayout
             android:id="@+id/linear_data"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+            android:padding="10dp" />
 
     </ScrollView>
 
